@@ -1,19 +1,19 @@
 -- Create 5 tables
-CREATE TABLE IF NOT EXISTS Students (
+CREATE TABLE Students (
     student_id INTEGER PRIMARY KEY,
     name TEXT,
     age INTEGER,
     major TEXT
 );
 
-CREATE TABLE IF NOT EXISTS Courses (
+CREATE TABLE Courses (
     course_id INTEGER PRIMARY KEY,
     course_name TEXT,
     credits INTEGER
 );
 
 
-CREATE TABLE IF NOT EXISTS Enrollments (
+CREATE TABLE Enrollments (
     enrollment_id INTEGER PRIMARY KEY,
     student_id INTEGER,
     course_id INTEGER,
@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS Enrollments (
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
 
-CREATE TABLE IF NOT EXISTS Professors (
+CREATE TABLE Professors (
     professor_id INTEGER PRIMARY KEY,
     name TEXT,
     department TEXT 
 );
 
-CREATE TABLE IF NOT EXISTS Departments (
+CREATE TABLE Departments (
     department_id INTEGER PRIMARY KEY,
     department_name TEXT
 );
